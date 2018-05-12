@@ -8,7 +8,7 @@ public class Account implements Serializable {
 
   /* Private Fields */
 
-	private String user_id;
+	  private String user_id;
 	  private String password;
 	  private String favouriteCategoryId;
 	  private String email;
