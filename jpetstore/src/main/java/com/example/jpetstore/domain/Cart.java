@@ -23,7 +23,7 @@ public class Cart implements Serializable {
 		this.itemList.setPageSize(4);
 	}
 
-	public Iterator<CartItem> getAllCartItems() { return itemList.getSource().iterator(); }
+  public Iterator<CartItem> getAllCartItems() { return itemList.getSource().iterator(); }
   public PagedListHolder<CartItem> getCartItemList() { return itemList; }
   public int getNumberOfItems() { return itemList.getSource().size(); }
 
