@@ -4,9 +4,10 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class Item implements Serializable {
+	//이게 inventory 까지 다 포함한 것임
   /* Private Fields */
   private String itemId;
-  private String productId;
+  private int productId;
   private double listPrice;
   private double unitCost;
   private int supplierId;
@@ -29,8 +30,8 @@ public class Item implements Serializable {
   public Product getProduct() { return product; }
   public void setProduct(Product product) { this.product = product; }
 
-  public String getProductId() { return productId; }
-  public void setProductId(String productId) { this.productId = productId; }
+  public int getProductId() { return productId; }
+  public void setProductId(int productId) { this.productId = productId; }
 
   public int getSupplierId() { return supplierId; }
   public void setSupplierId(int supplierId) { this.supplierId = supplierId; }
@@ -56,6 +57,6 @@ public class Item implements Serializable {
   public void setAttribute5(String attribute5) { this.attribute5 = attribute5; }
 
   public String toString() {
-    return "(" + getItemId().trim() + "-" + getProductId().trim() + ")";
+    return "(" + getItemId().trim() + "-" + getProductId() + ")";
   }
 }
