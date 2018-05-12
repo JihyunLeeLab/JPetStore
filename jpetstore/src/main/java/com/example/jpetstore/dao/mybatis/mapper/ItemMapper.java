@@ -36,5 +36,14 @@ public interface ItemMapper {
   Item getItem(String itemId);
   
   boolean isItemInStock(String itemId);
+  
+  //여기서부터 추가한 메소드
+  
+  void insertItem(Item item);
+  
+  int deleteItem(String itemId);
+  
+  void update_Item(List<String> a , List<String> b);
+  
 
 }

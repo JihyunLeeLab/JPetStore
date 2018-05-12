@@ -20,4 +20,11 @@ public class MybatisCategoryDao implements CategoryDao {
 	public Category getCategory(String categoryId) throws DataAccessException {
 		return categoryMapper.getCategory(categoryId);
 	}
+	
+	//여기서부터가 추가한 메소드
+	public void update_cat(String a,String b) throws DataAccessException{
+		
+		
+	}
+	
 }

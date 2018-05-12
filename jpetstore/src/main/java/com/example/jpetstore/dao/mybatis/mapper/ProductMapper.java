@@ -31,5 +31,13 @@ public interface ProductMapper {
   Product getProduct(String productId);
 
   List<Product> searchProductList(String keywords);
+  
+  //여기서부터가 추가한 메소드
+  void insertProduct(Product p);
+  
+  void updateProduct(List<String> a, List<String> b);//a라는 조건들을 b라고 바꾼다
+  
+  void deleteProduct(int product_id);
+  
 
 }
