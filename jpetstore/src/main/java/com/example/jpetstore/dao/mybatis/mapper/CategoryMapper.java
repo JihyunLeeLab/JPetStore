@@ -29,5 +29,10 @@ public interface CategoryMapper {
   List<Category> getCategoryList();
 
   Category getCategory(String categoryId);
+  
+  //여기서부터가 추가한 메소드
+  void update_cat(String a,String b);
+  
+  void insert_cat(Category c);
 
 }
