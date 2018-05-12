@@ -34,5 +34,5 @@ public interface CategoryMapper {
   void update_cat(String a,String b);
   
   void insert_cat(Category c);
-
+//¸¶ÀÚ ¹Ù²ñ!! ¿Ã¶ó°¬³¶?
 }
