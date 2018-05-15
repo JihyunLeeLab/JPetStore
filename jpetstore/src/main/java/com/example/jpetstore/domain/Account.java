@@ -48,6 +48,13 @@ public class Account implements Serializable {
 	  
 	  
 	  
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
 	private String sex;
 	  private boolean now_mileage;
 	 // private boolean bannerOption;

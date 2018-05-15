@@ -55,7 +55,7 @@ public class OrderController {
 		UserSession userSession = (UserSession) request.getSession().getAttribute("userSession");
 		if (cart != null) {
 			// Re-read account from DB at team's request.
-			Account account = petStore.getAccount(userSession.getAccount().getUsername());
+			Account account = petStore.getAccount(userSession.getAccount().getFirstName());
 			orderForm.getOrder().initOrder(account, cart);
 			return "NewOrderForm";	
 		}

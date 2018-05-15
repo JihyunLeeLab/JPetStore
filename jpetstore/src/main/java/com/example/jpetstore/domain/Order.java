@@ -125,7 +125,7 @@ public class Order implements Serializable {
   /* Public Methods */
 
   public void initOrder(Account account, Cart cart) {
-    username = account.getUsername();
+    username = account.getFirstName();
     orderDate = new Date();
 
     shipToFirstName = account.getFirstName();

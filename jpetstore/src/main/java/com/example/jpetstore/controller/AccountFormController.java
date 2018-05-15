@@ -52,7 +52,7 @@ public class AccountFormController {
 			(UserSession) WebUtils.getSessionAttribute(request, "userSession");
 		if (userSession != null) {	// edit an existing account
 			return new AccountForm(
-				petStore.getAccount(userSession.getAccount().getUsername()));
+				petStore.getAccount(userSession.getAccount().getFirstName()));
 		}
 		else {	// create a new account
 			return new AccountForm();
@@ -81,10 +81,10 @@ public class AccountFormController {
 			BindingResult result) throws Exception {
 
 		if (request.getParameter("account.listOption") == null) {
-			accountForm.getAccount().setListOption(false);
+			//accountForm.getAccount().setListOption(false);
 		}
 		if (request.getParameter("account.bannerOption") == null) {
-			accountForm.getAccount().setBannerOption(false);
+			//accountForm.getAccount().setBannerOption(false);
 		}
 		
 		validator.validate(accountForm, result);
@@ -105,7 +105,7 @@ public class AccountFormController {
 		}
 		
 		UserSession userSession = new UserSession(
-			petStore.getAccount(accountForm.getAccount().getUsername()));
+			petStore.getAccount(accountForm.getAccount().getFirstName()));
 		PagedListHolder<Product> myList = new PagedListHolder<Product>(
 			petStore.getProductListByCategory(accountForm.getAccount().getFavouriteCategoryId()));
 		myList.setPageSize(4);

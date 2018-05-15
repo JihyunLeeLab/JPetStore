@@ -23,6 +23,7 @@
               </tr>
               <tr>
                 <td>
+                
                   <a href="<c:url value="/shop/viewCategory.do?categoryId=DOGS"/>">
                     <img border="0" src="../images/dogs_icon.gif" /></a>
                 </td>
