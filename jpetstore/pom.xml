@@ -10,7 +10,7 @@
 	
 	<name>jpetstore</name>
 	<description>Sample project for Spring and Mybatis</description>
-
+	
 	<properties>
 		<java.version>1.8</java.version>
 		<spring.version>4.3.14.RELEASE</spring.version>
@@ -68,11 +68,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <version>2.4.3</version>
-       </dependency> 
+		            
 		<!-- Runtime dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -185,11 +181,7 @@
 			<version>${hsqldb.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-            <dependency>
-    <groupId>org.springframework.security</groupId>
-    <artifactId>spring-security-taglibs</artifactId>
-    <version>Your Security Version</version>
-</dependency>
+            
 		<!-- for oracle jdbc driver -->
 		<!-- 
 		<dependency>
