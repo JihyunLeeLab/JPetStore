@@ -185,7 +185,11 @@
 			<version>${hsqldb.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-            
+            <dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-taglibs</artifactId>
+    <version>Your Security Version</version>
+</dependency>
 		<!-- for oracle jdbc driver -->
 		<!-- 
 		<dependency>
