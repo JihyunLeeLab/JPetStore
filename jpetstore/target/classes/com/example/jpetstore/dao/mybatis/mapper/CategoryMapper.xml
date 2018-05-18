@@ -9,7 +9,7 @@
     SELECT
       CATID AS categoryId,
       NAME,
-      DESCN AS description
+      DESCR AS description
     FROM CATEGORY
     WHERE CATID = #{categoryId}
   </select>
@@ -18,7 +18,7 @@
     SELECT
       CATID AS categoryId,
       NAME,
-      DESCN AS description
+      DESCR AS description
     FROM CATEGORY
   </select>
 

@@ -9,7 +9,7 @@
     SELECT
       PRODUCTID,
       NAME,
-      DESCN as description,
+      DESCR as description,
       CATEGORY as categoryId
     FROM PRODUCT
     WHERE PRODUCTID = #{productId}
@@ -19,7 +19,7 @@
     SELECT
       PRODUCTID,
       NAME,
-      DESCN as description,
+      DESCR as description,
       CATEGORY as categoryId
     FROM PRODUCT
     WHERE CATEGORY = #{value}
