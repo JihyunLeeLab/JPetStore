@@ -10,7 +10,7 @@ public class Item implements Serializable {
   private int productId;
   private double listPrice;
   private double unitCost;
-  private int supplierId;
+  private String supplierId;
   private String status;
   private String attribute1;
   private String attribute2;
@@ -33,8 +33,8 @@ public class Item implements Serializable {
   public int getProductId() { return productId; }
   public void setProductId(int productId) { this.productId = productId; }
 
-  public int getSupplierId() { return supplierId; }
-  public void setSupplierId(int supplierId) { this.supplierId = supplierId; }
+  public String getSupplierId() { return supplierId; }
+  public void setSupplierId(String supplierId) { this.supplierId = supplierId; }
 
   public double getListPrice() { return listPrice; }
   public void setListPrice(double listPrice) { this.listPrice = listPrice; }
