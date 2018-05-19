@@ -20,9 +20,9 @@
       PRODUCTID,
       NAME,
       DESCR as description,
-      CATEGORY as categoryId
+      CATID as categoryId
     FROM PRODUCT
-    WHERE CATEGORY = #{value}
+    WHERE CATID = #{value}
   </select>
 
   <select id="searchProductList" resultType="Product">
