@@ -10,7 +10,7 @@
       PRODUCTID,
       NAME,
       DESCR as description,
-      CATEGORY as categoryId
+      CATID as categoryId
     FROM PRODUCT
     WHERE PRODUCTID = #{productId}
   </select>
@@ -29,8 +29,8 @@
     select
       PRODUCTID,
       NAME,
-      DESCN as description,
-      CATEGORY as categoryId
+      DESCR as description,
+      CATID as categoryId
     from PRODUCT
     WHERE lower(name) like #{value}
   </select>
