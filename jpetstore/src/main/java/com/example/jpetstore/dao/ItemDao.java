@@ -9,7 +9,7 @@ import com.example.jpetstore.domain.Order;
 
 public interface ItemDao {
 
-  public void updateQuantity(Order order) throws DataAccessException;
+  void updateQuantity(Order order) throws DataAccessException;
 
   boolean isItemInStock(String itemId) throws DataAccessException;
 

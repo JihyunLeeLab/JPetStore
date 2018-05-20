@@ -7,7 +7,7 @@ public class MybatisMileageDao implements MileageDao {
 	private MileageMapper mileageMapper;
 	
 	public int getMileage(String userId) throws DataAccessException {
-		return mileageMapper.eage();
+	
 	}
 	
 	

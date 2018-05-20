@@ -1,4 +1,3 @@
-
 package com.example.jpetstore.dao.mybatis.mapper;
 
 public interface MileageMapper {
