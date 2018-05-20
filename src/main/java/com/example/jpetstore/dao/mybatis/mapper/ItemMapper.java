@@ -36,8 +36,7 @@ public interface ItemMapper {
 	
   List<Item> getItemListByProduct(String productId);
 
-  Item getItem(String itemId);
-  
+  Item getItem(String itemId);  
  
   //여기서부터 추가한 메소드
   //사용자가 등록한 아이템을 보여주는 메소드
