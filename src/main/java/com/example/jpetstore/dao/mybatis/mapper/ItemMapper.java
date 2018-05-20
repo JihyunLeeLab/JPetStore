@@ -46,7 +46,7 @@ public interface ItemMapper {
   //아이템을 넣는것
   void insertItem(String itemId,String proId,String catId,double lp,double up,
 		  String suppId,String status,String a1,String a2,String a3,String a4,String a5,
-		  int isAuction);
+		  int is);
   
   
   int deleteItem(String itemId);

@@ -53,7 +53,7 @@ import com.example.jpetstore.domain.Product;
  */
 @Service
 @Transactional
-public class PetStoreImpl implements PetStoreFacade { 
+public abstract class PetStoreImpl implements PetStoreFacade { 
 	@Autowired
 	private AccountDao accountDao;
 	@Autowired
@@ -117,12 +117,12 @@ public class PetStoreImpl implements PetStoreFacade {
 		return itemDao.getItem(itemId);
 	}
 
-	public boolean isItemInStock(String itemId) {
+/*	public boolean isItemInStock(String itemId) {
 		return itemDao.isItemInStock(itemId);
 	}
-
+*/
 	public void insertOrder(Order order) {
-		itemDao.updateQuantity(order);	    
+	//	itemDao.updateQuantity(order);	    
 		orderDao.insertOrder(order);
 	}
 	

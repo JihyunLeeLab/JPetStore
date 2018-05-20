@@ -62,14 +62,28 @@
     WHERE ITEMID = #{itemId}
   </update>
   
+  <select id="getItemByUser" resultType="Item">
+  SELECT *
+  FROM ITEM
+  WHERE SELLER=#{userId}  
+  </select>
   
+  <insert id="insertItem">
+  INSERT INTO ITEM VALUES(#{itemId},#{proId},#{catId},#{lp},#{up},#{suppId}, #{status},#{a1},#{a2},#{a3},#{a4},#{a5},#{isAuction});
+  </insert>
   
+  <delete id="deleteItem">
+  DELETE FROM ITEM WHERE ITEMID=#{itemId}
+  </delete>
   
+  <update id="update_Item">
+  UPDATE ITEM
+  SET PRODUCTID=#{proId} AND CATID=#{catId} AND LISTPRICE=#{lp} AND UNITCOST=#{up} AND SELLER=#{suppId} AND STATUS=#{status}
+  	AND ATTR1=#{a1} AND ATTR2=#{a2} AND ATTR3=#{a3} AND ATTR4=#{a4} AND ATTR5=#{a5} AND ISAUCTION=#{is}
+  WHERE ITEMID= #{itemId}
   
-  
-  
-  
-  
+  </update>
+    
   
   
   
