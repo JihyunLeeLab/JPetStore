@@ -5,11 +5,25 @@
   <cache />
 
   <select id="getItemListByProduct" resultType="Item">
-    SELECT   I.ITEMID,   I.PRODUCTID,   I.CATID AS "product.categoryId",    LISTPRICE,   UNITCOST,    SELLER AS supplierId,
-          I.PRODUCTID AS "product.productId",    NAME AS "product.name",    DESCR AS "product.description",STATUS,    ATTR1 AS attribute1,
-         ATTR2 AS attribute2,    ATTR3 AS attribute3,    ATTR4 AS attribute4,    ATTR5 AS attribute5  FROM ITEM I, PRODUCT P
-      
-    WHERE P.PRODUCTID = I.PRODUCTID  AND I.PRODUCTID = #{value}
+    SELECT
+      I.ITEMID,
+      I.PRODUCTID,
+      LISTPRICE,
+      UNITCOST,
+      SUPPLIER AS supplierId,
+      I.PRODUCTID AS "product.productId",
+      NAME AS "product.name",
+      DESCN AS "product.description",
+      CATEGORY AS "product.categoryId",
+      STATUS,
+      ATTR1 AS attribute1,
+      ATTR2 AS attribute2,
+      ATTR3 AS attribute3,
+      ATTR4 AS attribute4,
+      ATTR5 AS attribute5
+    FROM ITEM I, PRODUCT P
+    WHERE P.PRODUCTID = I.PRODUCTID
+      AND I.PRODUCTID = #{value}
   </select>
 
   <select id="getItem" resultType="Item">
@@ -18,11 +32,11 @@
       I.PRODUCTID,
       LISTPRICE,
       UNITCOST,
-      SELLER AS supplierId,
+      SUPPLIER AS supplierId,
       I.PRODUCTID AS "product.productId",
       NAME AS "product.name",
-      DESCR AS "product.description",
-      I.CATID AS "product.categoryId",
+      DESCN AS "product.description",
+      CATEGORY AS "product.categoryId",
       STATUS,
       ATTR1 AS attribute1,
       ATTR2 AS attribute2,
@@ -47,4 +61,46 @@
     SET QTY = QTY - #{increment}
     WHERE ITEMID = #{itemId}
   </update>
+  
+  <select id="getItemByUser" resultType="Item">
+  SELECT *
+  FROM ITEM
+  WHERE SELLER=#{userId}  
+  </select>
+  
+  <insert id="insertItem">
+  INSERT INTO ITEM VALUES(#{itemId},#{proId},#{catId},#{lp},#{up},#{suppId}, #{status},#{a1},#{a2},#{a3},#{a4},#{a5},#{isAuction});
+  </insert>
+  
+  <delete id="deleteItem">
+  DELETE FROM ITEM WHERE ITEMID=#{itemId}
+  </delete>
+  
+  <update id="update_Item">
+  UPDATE ITEM
+  SET PRODUCTID=#{proId} AND CATID=#{catId} AND LISTPRICE=#{lp} AND UNITCOST=#{up} AND SELLER=#{suppId} AND STATUS=#{status}
+  	AND ATTR1=#{a1} AND ATTR2=#{a2} AND ATTR3=#{a3} AND ATTR4=#{a4} AND ATTR5=#{a5} AND ISAUCTION=#{is}
+  WHERE ITEMID= #{itemId}
+  
+  </update>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </mapper>

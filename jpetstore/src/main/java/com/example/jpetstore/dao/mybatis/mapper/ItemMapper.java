@@ -19,6 +19,8 @@ package com.example.jpetstore.dao.mybatis.mapper;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.dao.DataAccessException;
+
 import com.example.jpetstore.domain.Item;
 
 /**
@@ -31,20 +33,27 @@ public interface ItemMapper {
   int getInventoryQuantity(String itemId); 
   boolean isItemInStock(String itemId);
 */
+	
   List<Item> getItemListByProduct(String productId);
 
-  Item getItem(String itemId);
-  
-  
+  Item getItem(String itemId);  
+ 
   //여기서부터 추가한 메소드
-  void insertItem(String itemId,String proId,String catId,int lP,int uP,
-		  String seller,String status,String a1,String a2,String a3,String a4,String a5,
-		  int isAuction);
+  //사용자가 등록한 아이템을 보여주는 메소드
+  List<Item> getItemByUser(String userId) throws DataAccessException;
+  
+  
+  //아이템을 넣는것
+  void insertItem(String itemId,String proId,String catId,double lp,double up,
+		  String suppId,String status,String a1,String a2,String a3,String a4,String a5,
+		  int is);
+  
   
   int deleteItem(String itemId);
   
-  void update_Item(String itemId,String proId,String catId,int lP,int uP,
-		  String seller,String status,String a1,String a2,String a3,String a4,String a5,
+  //아이템 수정페이지 자체가 이미 전체 수정이 가능하게 되어있으므로 그냥 아이템하나 자체를 다 바꾼다는 생각으로 이렇게 코딩
+  void update_Item(String itemId,String proId,String catId,double lP,double uP,
+		  String suppId,String status,String a1,String a2,String a3,String a4,String a5,
 		  int isAuction);
   
 

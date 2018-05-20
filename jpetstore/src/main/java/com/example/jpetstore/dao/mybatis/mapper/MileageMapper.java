@@ -1,6 +1,11 @@
 
 package com.example.jpetstore.dao.mybatis.mapper;
 
+import java.util.Date;
+import java.util.List;
+
+import com.example.jpetstore.domain.Mileage;
+
 public interface MileageMapper {
 	//내가 추가한 메소드
 		
@@ -14,7 +19,7 @@ public interface MileageMapper {
 	
    void insert_mileage_history(String userId, Date date, int point,
 		                                           int transfer, String description);
-   
+
 
 
 }

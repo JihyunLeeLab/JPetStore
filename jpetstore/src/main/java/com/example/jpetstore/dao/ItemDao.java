@@ -20,6 +20,8 @@ public interface ItemDao {
   
   //여기서부터 또히가 정의한 메소드
   
+  List<Item> getItemByUser(String userId) throws DataAccessException;
+  
   void insertItem(Item item) throws DataAccessException;
   
   int deleteItem(String itemId)throws DataAccessException;

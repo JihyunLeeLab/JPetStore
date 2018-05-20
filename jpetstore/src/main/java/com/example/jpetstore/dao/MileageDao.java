@@ -1,5 +1,11 @@
-package com.example.jpetstore.dao.mybatis;
+package com.example.jpetstore.dao;
 
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.dao.DataAccessException;
+
+import com.example.jpetstore.domain.Mileage;
 
 public interface MileageDao {
 	//¾È´¨?!?!
