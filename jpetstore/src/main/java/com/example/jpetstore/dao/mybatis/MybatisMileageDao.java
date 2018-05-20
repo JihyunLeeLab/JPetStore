@@ -31,8 +31,8 @@ public class MybatisMileageDao implements MileageDao {
 	
 	
 	 public void transferMileage(String user1, String user2,int mileage, Date date) throws DataAccessException{
-		 mileageMapper.insert_mileage_history(user1,date,(-1)*mileage,true,"transfer");
-		 mileageMapper.insert_mileage_history(user2,date,mileage,true,"transfer");
+		 mileageMapper.insert_mileage_history(user1,date,(-1)*mileage,1,"transfer");
+		 mileageMapper.insert_mileage_history(user2,date,mileage,1,"transfer");
 		 mileageMapper.updateMileage(user1);
 		 mileageMapper.updateMileage(user2);
 	 }

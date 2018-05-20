@@ -13,7 +13,7 @@ public interface MileageMapper {
    List<Mileage> showMileageList(String userId);
 	
    void insert_mileage_history(String userId, Date date, int point,
-		                                           boolean transfer, String description);
+		                                           int transfer, String description);
    
 
 

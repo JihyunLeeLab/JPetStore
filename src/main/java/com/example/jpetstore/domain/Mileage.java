@@ -9,14 +9,14 @@ public class Mileage {
 	private String user_id;
 	private Date date;
 	private int point;
-	private boolean transfer;
+	private int transfer;
 	private String description;
 	
 	
 	public Mileage() {
 	}
 	
-	public Mileage(String user_id, Date date, int point, boolean transfer, String description) {
+	public Mileage(String user_id, Date date, int point, int transfer, String description) {
 		this.user_id = user_id;
 		this.date = date;
 		this.point = point;
@@ -41,10 +41,10 @@ public class Mileage {
 	public void setPoint(int point) {
 		this.point = point;
 	}
-	public boolean isTransfer() {
+	public int isTransfer() {
 		return transfer;
 	}
-	public void setTransfer(boolean transfer) {
+	public void setTransfer(int transfer) {
 		this.transfer = transfer;
 	}
 	public String getDescription() {

@@ -17,7 +17,7 @@
 </select>
 
 <update id="setMileage">
-	UPDATE ACCOUNT SET NOW_MIEAGE =#{now}  WHERE USERID = #{userId}
+	UPDATE ACCOUNT SET NOW_MILEAGE=#{now}  WHERE USERID=#{userId}
 </update>
 
 <select id="showMileageList" resultType="Map"><!-- 여기는 좀 공부하고 다시 ㅇㅇ -->
@@ -28,6 +28,7 @@
 </select>
 
 <insert id="insert_mileage_history">
+INSERT INTO MILEAGE_TABLE VALUES(#{userId},#{date},#{point},#{transfer},#{description})
 </insert>
 
 
