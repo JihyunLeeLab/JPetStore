@@ -7,10 +7,11 @@ public class Item implements Serializable {
 	//이게 inventory 까지 다 포함한 것임
   /* Private Fields */
   private String itemId;
-  private int productId;
+  private String productId;
+  private String catId;
   private double listPrice;
   private double unitCost;
-  private int supplierId;
+  private String supplierId;
   private String status;
   private String attribute1;
   private String attribute2;
@@ -18,6 +19,7 @@ public class Item implements Serializable {
   private String attribute4;
   private String attribute5;
   private Product product;
+  private int isAuctioned;
   private int quantity;
 
   /* JavaBeans Properties */
@@ -30,11 +32,11 @@ public class Item implements Serializable {
   public Product getProduct() { return product; }
   public void setProduct(Product product) { this.product = product; }
 
-  public int getProductId() { return productId; }
-  public void setProductId(int productId) { this.productId = productId; }
+  public String getProductId() { return productId; }
+  public void setProductId(String productId) { this.productId = productId; }
 
-  public int getSupplierId() { return supplierId; }
-  public void setSupplierId(int supplierId) { this.supplierId = supplierId; }
+  public String getSupplierId() { return supplierId; }
+  public void setSupplierId(String supplierId) { this.supplierId = supplierId; }
 
   public double getListPrice() { return listPrice; }
   public void setListPrice(double listPrice) { this.listPrice = listPrice; }
@@ -55,7 +57,15 @@ public class Item implements Serializable {
   public void setAttribute4(String attribute4) { this.attribute4 = attribute4; }
   public String getAttribute5() { return attribute5; }
   public void setAttribute5(String attribute5) { this.attribute5 = attribute5; }
+  
+  
 
+  public int getIsAuctioned() {return isAuctioned;}
+  public void setIsAuctioned(int isAuctioned) {	this.isAuctioned = isAuctioned;}
+
+  public String getCatId() { return catId;}
+  public void setCatId(String catId) {	this.catId = catId;}
+  
   public String toString() {
     return "(" + getItemId().trim() + "-" + getProductId() + ")";
   }

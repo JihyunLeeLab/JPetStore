@@ -26,24 +26,26 @@ import com.example.jpetstore.domain.Item;
  *
  */
 public interface ItemMapper {
-
+/*
   void updateInventoryQuantity(Map<String, Object> param);
-
-  int getInventoryQuantity(String itemId);
-
+  int getInventoryQuantity(String itemId); 
+  boolean isItemInStock(String itemId);
+*/
   List<Item> getItemListByProduct(String productId);
 
   Item getItem(String itemId);
   
-  boolean isItemInStock(String itemId);
   
   //여기서부터 추가한 메소드
-  
-  void insertItem(Item item);
+  void insertItem(String itemId,String proId,String catId,int lP,int uP,
+		  String seller,String status,String a1,String a2,String a3,String a4,String a5,
+		  int isAuction);
   
   int deleteItem(String itemId);
   
-  void update_Item(List<String> a , List<String> b);
+  void update_Item(String itemId,String proId,String catId,int lP,int uP,
+		  String seller,String status,String a1,String a2,String a3,String a4,String a5,
+		  int isAuction);
   
 
 }
