@@ -4,17 +4,31 @@
 <mapper namespace="com.example.jpetstore.dao.mybatis.mapper.MileageMapper">
 <cache />
 
+<select id="getMileage" resultType="int">
+	SELECT NOW_MILEAGE
+	FROM ACCOUNT
+	WHERE USERID = #{value};
+</select>
+
+<select id="getMileageSum" resultType="int">
+	SELECT SUM(POINT) AS NOW_POINT
+	FROM  MILEAGE_TABLE 
+	WHERE USERID = #{value}
+</select>
+
+<update id="setMileage">
+	UPDATE ACCOUNT SET NOW_MIEAGE =#{now}  WHERE USERID = #{userId}
+</update>
+
+<select id="showMileageList" resultType="Map"><!-- 여기는 좀 공부하고 다시 ㅇㅇ -->
 
 
 
 
+</select>
 
-
-
-
-
-
-
+<insert id="insert_mileage_history">
+</insert>
 
 
 
